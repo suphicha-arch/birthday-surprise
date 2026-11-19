@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #fce4ec, #e8d5ff, #fce4ec);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 480px;
+    position: relative;
+    z-index: 2;
+}
+
+.page {
+    display: none;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(15px);
+    padding: 40px 25px;
+    border-radius: 28px;
+    text-align: center;
+    box-shadow: 0 15px 50px rgba(160,100,150,0.15);
+    animation: appear 0.6s ease;
+}
+
+.page.active {
+    display: block;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.emoji {
+    font-size: 65px;
+    margin-bottom: 20px;
+    animation: floating 2s infinite ease-in-out;
+}
+
+@keyframes floating {
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.small-title {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #bd79a5;
+    margin-bottom: 15px;
+}
+
+h1 {
+    color: #c05b91;
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: #bd6e9f;
+    margin-bottom: 25px;
+}
+
+.description {
+    color: #92788d;
+    line-height: 2;
+    margin-bottom: 25px;
+}
+
+button {
+    border: none;
+    padding: 13px 32px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #ee91b9, #bb8be8);
+    color: white;
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(190,120,170,0.25);
+}
+
+button:hover {
+    transform: translateY(-4px) scale(1.04);
+    box-shadow: 0 8px 20px rgba(190,120,170,0.35);
+}
+
+.footer {
+    font-size: 12px;
+    color: #c5a0b8;
+    margin-top: 30px;
+}
+
+.question-box {
+    background: #fff5fa;
+    padding: 25px 15px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.question-box h3 {
+    color: #9f608b;
+    margin-bottom: 20px;
+}
+
+.answer-btn {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    background: white;
+    color: #a46d92;
+    border: 1px solid #f2d4e5;
+    box-shadow: none;
+}
+
+.answer-btn:hover {
+    background: #ffe5f1;
+}
+
+.answer-btn:disabled {
+    cursor: default;
+    opacity: 0.8;
+}
+
+.progress {
+    width: 100%;
+    height: 9px;
+    background: #f3dce9;
+    border-radius: 20px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+#progressBar {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #f18db8, #bd8be8);
+    transition: 0.4s;
+}
+
+#questionNumber {
+    color: #bd8baa;
+    font-size: 13px;
+}
+
+#feedback {
+    margin-top: 15px;
+    color: #c16e9b;
+}
+
+.score {
+    margin-top: 20px;
+    color: #c16e9b;
+    font-size: 20px;
+}
+
+.message-box {
+    background: #fff3f9;
+    padding: 25px;
+    border-radius: 20px;
+    color: #a16f91;
+    line-height: 2;
+}
+
+#secretMessage {
+    color: #d36e9e;
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+.gift {
+    font-size: 100px;
+    cursor: pointer;
+    margin: 35px 0;
+    transition: 0.4s;
+}
+
+.gift:hover {
+    transform: scale(1.2) rotate(-10deg);
+}
+
+.letter {
+    background: #fff7fb;
+    padding: 25px 20px;
+    border-radius: 20px;
+    text-align: left;
+    color: #957187;
+    line-height: 2;
+    white-space: pre-line;
+}
+
+.letter h3 {
+    color: #cf75a3;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.signature {
+    text-align: center;
+    margin-top: 25px;
+    color: #d477a7;
+    font-weight: 500;
+}
+
+.background-hearts {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.heart {
+    position: absolute;
+    bottom: -30px;
+    animation: heartFloat 7s linear forwards;
+    opacity: 0.6;
+}
+
+@keyframes heartFloat {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .page {
+        padding: 35px 20px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+}
