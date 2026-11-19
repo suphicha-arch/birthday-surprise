@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Little Surprise For You ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="background-hearts" id="hearts"></div>
+
+<div class="container">
+
+    <!-- หน้าเริ่มต้น -->
+    <section class="page active" id="page1">
+
+        <div class="emoji">🎂</div>
+
+        <p class="small-title">A SPECIAL DAY FOR SOMEONE SPECIAL</p>
+
+        <h1>Happy Birthday!</h1>
+
+        <p class="description">
+            วันนี้มีอะไรบางอย่างอยากให้หนู<br>
+            พร้อมจะเล่น Game เล็ก ๆ นี้หรือยังคะ?
+        </p>
+
+        <button onclick="startGame()">Start Adventure ♡</button>
+
+        <p class="footer">Made with love, just for you.</p>
+
+    </section>
+
+
+    <!-- เกมตอบคำถาม -->
+    <section class="page" id="page2">
+
+        <p class="small-title">LEVEL 01</p>
+
+        <h2>Let's Play Together 💗</h2>
+
+        <div class="progress">
+            <div id="progressBar"></div>
+        </div>
+
+        <p id="questionNumber">Question 1 / 3</p>
+
+        <div class="question-box">
+
+            <h3 id="question">คำถาม</h3>
+
+            <div id="answers"></div>
+
+        </div>
+
+        <p id="feedback"></p>
+
+        <div class="score">
+            ❤️ <span id="score">0</span> / 3
+        </div>
+
+    </section>
+
+
+    <!-- ปลดล็อกข้อความ -->
+    <section class="page" id="page3">
+
+        <div class="emoji">🔐</div>
+
+        <p class="small-title">LEVEL 02</p>
+
+        <h2>You've Unlocked Something!</h2>
+
+        <div class="message-box">
+
+            <p>
+                พี่มีอะไรจะบอกเบบี้ด้วยยย...
+            </p>
+
+            <p id="secretMessage">
+                ขอบคุณที่เข้ามาเป็นส่วนหนึ่งในชีวิตของพี่นะ ❤️
+            </p>
+
+        </div>
+
+        <button onclick="goGift()">Continue ♡</button>
+
+    </section>
+
+
+    <!-- กล่องของขวัญ -->
+    <section class="page" id="page4">
+
+        <p class="small-title">LEVEL 03</p>
+
+        <h2>A Little Gift For You 🎁</h2>
+
+        <p class="description">
+            มีของขวัญชิ้นหนึ่งที่เตรียมไว้ให้<br>
+            ลองกดเปิดดูสิ!
+        </p>
+
+        <div class="gift" id="gift" onclick="openGift()">
+            <span id="giftEmoji">🎁</span>
+        </div>
+
+        <p id="giftText">Tap to open your gift!</p>
+
+    </section>
+
+
+    <!-- หน้าสุดท้าย -->
+    <section class="page" id="page5">
+
+        <div class="emoji">💌</div>
+
+        <p class="small-title">THE LAST SURPRISE</p>
+
+        <h1>For You ❤️</h1>
+
+        <div class="letter">
+
+            <h3>ถึงคนพิเศษของเรา</h3>
+
+            <p id="letterContent">
+                สุขสันต์วันเกิดนะ
+
+                ขอให้ปีนี้เป็นปีที่ดีสำหรับเธอ สมหวังในเป้าหมายที่ตั้งไว้
+                ขอให้ทุกวันที่ตื่นขึ้นมาเต็มไปด้วยรอยยิ้มนะคนเก่งของพี่
+
+                ขอบคุณที่เข้ามาในชีวิตของพี่
+                ขอบคุณที่อยู่ด้วยกันในวันที่ดีและวันที่ไม่ค่อยดี
+              ขอบคุณที่ยังรักกันอยู่ถึงทุกวันนี้
+
+                พี่ไม่ใช่คนที่พูดเก่ง
+                หรือแสดงความรู้สึกเก่งขนาดนั้น
+
+                แต่พี่อยากให้หนูรู้ว่า
+                หนูเป็นคนสำคัญสำหรับพี่มาก ๆ
+
+                ขอให้อ้วนมีความสุขมากๆนะ และก็ๆ อยู่กับพี่ไปนานๆเลย
+
+                I LOVE YOU ❤️
+            </p>
+
+            <div class="signature">
+                With Love, Always ♡
+            </div>
+
+        </div>
+
+        <button onclick="restartGame()">Play Again ↻</button>
+
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
